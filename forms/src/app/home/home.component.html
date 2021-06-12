@@ -1,0 +1,152 @@
+<section class="add-address" *ngIf="!edit">
+    <div class="container">
+        <form [formGroup]="AddSubscriber">
+
+            <div class="addr-title">
+                <h2>Add a New Subscriber</h2>
+            </div>
+            <div class="add-address-form">
+                <div class="form-cont">
+                    <p>Name</p>
+                    <input type="text" formControlName="name" name="name" id="name" placeholder="Enter your Name">
+
+                </div>
+                <div class="form-cont">
+                    <p>Gender</p>
+                    <label>  
+                            <input type="radio" formControlName="gender" name="gender" value="Male" [checked]='true' ngModel>  
+                            Male  
+                        </label>
+
+                    <label>  
+                            <input type="radio" formControlName="gender" name="gender" value="Female" ngModel>  
+                            Female  
+                        </label>
+                    <!-- <input type="text" formControlName="gender" name="gender" id="gender" placeholder="Last Name"> -->
+                </div>
+
+                <div class="form-cont">
+                    <p>Email Address</p>
+                    <input type="text" formControlName="email" name="email" id="email" placeholder="Enter your email">
+                </div>
+                <div class="form-cont">
+                    <p>Mobile</p>
+                    <input type="text" formControlName="mobile" maxlength="10" name="mobile" id="mobile" placeholder="Enter your Mobile number">
+
+                </div>
+                <div class="form-cont">
+                    <p>Address 1</p>
+                    <input type="text" formControlName="addressLine1" name="addressLine1" id="addressLine1" placeholder="enter Addressline 1">
+
+                </div>
+                <div class="form-cont">
+                    <p>Address 2</p>
+                    <input type="text" formControlName="addressLine2" name="addressLine2" id="addressLine2" placeholder="enter Addressline 2">
+
+                </div>
+                <div class="form-cont">
+                    <p>State</p>
+                    <input type="text" formControlName="state" name="state" id="state" placeholder="Enter your state">
+
+                </div>
+                <div class="form-cont">
+                    <p>City</p>
+                    <input type="text" formControlName="city" name="city" id="city" placeholder="Enter City">
+
+                </div>
+
+                <div class="form-cont">
+                    <p>Zip Code</p>
+                    <input type="number" formControlName="zipcode" name="zipcode" id="zipcode" placeholder="Enter Zip Code">
+
+                </div>
+                <div class="form-cont">
+                    <p>country</p>
+                    <input type="text" formControlName="country" name="country" id="country" placeholder="Enter your country">
+
+                </div>
+            </div>
+
+            <div class="profile-save">
+                <button class="save-btn" (click)="Subscriber()">Save</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+
+<section class="add-address" *ngIf="edit">
+    <div class="container">
+        <form [formGroup]="AddSubscriber">
+
+            <div class="addr-title">
+                <h2>Edit Subscriber</h2>
+            </div>
+            <div class="add-address-form">
+                <div class="form-cont">
+                    <p>Name</p>
+                    <input type="text" formControlName="name" [(ngModel)]="data.name" name="name" id="name" placeholder="Enter your Name">
+
+                </div>
+                <div class="form-cont">
+                    <p>Gender</p>
+                    <label>  
+                            <input type="radio" formControlName="gender" name="gender"  [checked]="isMale" value="Male" [checked]='true' ngModel>  
+                            Male  
+                        </label>
+
+                    <label>  
+                            <input type="radio" formControlName="gender" name="gender" [(ngModel)]="!isMale" [checked]="!isMale" value="Female" ngModel>  
+                            Female  
+                        </label>
+                    <!-- <input type="text" formControlName="gender" name="gender" id="gender" placeholder="Last Name"> -->
+                </div>
+
+                <div class="form-cont">
+                    <p>Email Address</p>
+                    <input type="text" formControlName="email" name="email" [(ngModel)]="data.email" id="email" placeholder="Enter your email">
+                </div>
+                <div class="form-cont">
+                    <p>Mobile</p>
+                    <input type="text" formControlName="mobile" maxlength="10" [(ngModel)]="data.mobile" name="mobile" id="mobile" placeholder="Enter your Mobile number">
+
+                </div>
+                <div class="form-cont">
+                    <p>Address 1</p>
+                    <input type="text" formControlName="addressLine1" name="addressLine1" id="addressLine1" [(ngModel)]="data.addressLine1" placeholder="enter Addressline 1">
+
+                </div>
+                <div class="form-cont">
+                    <p>Address 2</p>
+                    <input type="text" formControlName="addressLine2" name="addressLine2" id="addressLine2" [(ngModel)]="data.addressLine2" placeholder="enter Addressline 2">
+
+                </div>
+                <div class="form-cont">
+                    <p>State</p>
+                    <input type="text" formControlName="state" name="state" [(ngModel)]="data.state" id="state" placeholder="Enter your state">
+
+                </div>
+                <div class="form-cont">
+                    <p>City</p>
+                    <input type="text" formControlName="city" name="city" id="city" [(ngModel)]="data.city" placeholder="Enter City">
+
+                </div>
+
+                <div class="form-cont">
+                    <p>Zip Code</p>
+                    <input type="number" formControlName="zipcode" name="zipcode" [(ngModel)]="data.zipcode" id="zipcode" placeholder="Enter Zip Code">
+
+                </div>
+                <div class="form-cont">
+                    <p>country</p>
+                    <input type="text" formControlName="country" name="country" id="country" [(ngModel)]="data.country" placeholder="Enter your country">
+
+                </div>
+            </div>
+
+            <div class="profile-save">
+                <button class="save-btn" (click)="Subscribers()">Save</button>
+            </div>
+        </form>
+    </div>
+</section>

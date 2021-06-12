@@ -1,0 +1,49 @@
+.table {
+    border: 2px solid #000000;
+}
+
+#tab td,
+#tab th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+td button {
+    border: none;
+    color: transparent;
+    background-color: transparent;
+}
+
+.delete img {
+    height: 60%;
+    width: 60%;
+    padding-top: 5px;
+}
+
+#tab tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#tab th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #ffa800;
+    color: white;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#tab tr:hover {
+    background-color: #ddd;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

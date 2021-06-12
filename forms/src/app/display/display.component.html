@@ -1,0 +1,57 @@
+<h1>
+    Subscriber List</h1>
+<div class="main">
+
+    <table class="table" id='tab'>
+        <thead>
+            <tr>
+                <th scope="col">Id.</th>
+                <th scope="col">Name</th>
+                <th scope="col">gender</th>
+                <th scope="col">email</th>
+                <th scope="col">mobile</th>
+                <th scope="col">addressLine1</th>
+                <th scope="col">addressLine2</th>
+                <th scope="col">state</th>
+                <th scope="col">city</th>
+                <th scope="col">zipcode</th>
+                <th scope="col">country</th>
+                <th scope="col">Edit</th>
+                <th scope="col">Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- <tr *ngFor="let e of Item;">
+            <td>{{ e.businessDisplayName}}</td>
+            <td>{{ e.companyId }}</td>
+            <td>{{ e.noOfSlotsAvailable }}</td>
+        </tr> -->
+            <tr *ngFor="let e of alldata;">
+                <td>{{e.id}}</td>
+                <td>{{e.name}}</td>
+                <td>{{e.gender}}</td>
+                <td>{{e.email}}</td>
+                <td>+91{{e.mobile}}</td>
+                <td>{{e.addressLine1}}</td>
+                <td>{{e.addressLine2}}</td>
+                <td>{{e.state}}</td>
+                <td>{{e.city}}</td>
+                <td>{{e.zipcode}}</td>
+                <td>{{e.country}}</td>
+                <td><button (click)="edit(e)">
+                    <img src="../../assets/edit-yellow.svg">
+                </button> </td>
+                <td class="delete"><button (click)="delete(e.id)">
+                    <img src="https://img.icons8.com/plasticine/100/000000/delete-sign.png"/>">
+                </button> </td>
+
+            </tr>
+
+        </tbody>
+    </table>
+
+
+</div>
+<div>
+    <h5>{{msg}}</h5>
+</div>

@@ -1,0 +1,78 @@
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/dist
+/tmp
+/out-tsc
+# Only exists if Bazel was run
+/bazel-out
+
+# dependencies
+forms/node_modules
+
+# profiling files
+forms/chrome-profiler-events*.json
+forms/speed-measure-plugin*.json
+
+# IDEs and editors
+/.idea
+.c9/
+*.launch
+forms/.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+forms/.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# misc
+forms/.sass-cache
+forms/connect.lock
+forms/coverage
+forms/libpeerconnection.log
+forms/npm-debug.log
+forms/yarn-error.log
+forms/testem.log
+forms/typings
+
+# System Files
+forms/.DS_Store
+forms/Thumbs.db
